@@ -1,0 +1,10 @@
+# Lab: servidor web simples com Docker Compose
+# Subir:    docker compose up -d
+# Testar:   curl http://localhost:8080
+# Derrubar: docker compose down
+services:
+  web:
+    image: nginx:stable-alpine
+    ports:
+      - "8080:80"
+    restart: unless-stopped
